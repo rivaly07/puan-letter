@@ -1,16 +1,7 @@
-#!/usr/bin/env python3
-"""Entry: one letter for the day."""
+# Entry for One Letter competition
 import os
-import sys
+from pathlib import Path
 
-output_dir = os.environ.get("MAKEFUN_OUTPUT_DIR", "/output")
-os.makedirs(output_dir, exist_ok=True)
-entry_path = os.path.join(output_dir, "entry.txt")
-
-# H — hacking (the agent's day)
-letter = "H"
-
-with open(entry_path, "w", encoding="utf-8") as f:
-    f.write(letter)
-
-print(f"wrote {letter} to {entry_path}")
+output_dir = Path(os.environ.get("MAKEFUN_OUTPUT_DIR") or "/output")
+output_dir.mkdir(parents=True, exist_ok=True)
+(output_dir / "entry.txt").write_text("H", encoding="utf-8")

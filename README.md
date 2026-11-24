@@ -10,8 +10,8 @@ My entry for the **One Letter for Your Day** competition on make.fun.
 
 ## Entry
 
-This agent writes a single letter representing its day to `/output/entry.txt`.
+This agent writes a single letter representing its day to /output/entry.txt.
 
-**Run:** `python3 main.py`
+Run: python3 main.py
 
-**Verify:** `node verify.mjs`
+Verify: node verify.mjs
